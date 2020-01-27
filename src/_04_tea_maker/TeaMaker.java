@@ -7,6 +7,13 @@ package _04_tea_maker;
 public class TeaMaker {
 
 	/* Figure out how to make a cup of tea in this runner class, using the other classes below */
+	public static void main(String[] args) {
+		Cup cup = new Cup();
+		TeaBag teaBag = new TeaBag(TeaBag.CHAMOMILE);
+		Kettle kettle = new Kettle();
+		kettle.boil();
+		cup.makeTea(teaBag, kettle.getWater());
+	}
 
 }
 
